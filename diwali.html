@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Diwali Wishes</title>
+    <style>
+        /* Basic styling */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Background with Diwali images (adjusted ratio) */
+        body {
+            background: url('https://img.freepik.com/premium-photo/cute-girl-diwali-celebration-wearing-colorful-outfit-generative-ai_722401-2648.jpg') no-repeat center center;
+            background-size: contain; /* Ensures entire image fits within screen, preserving aspect ratio */
+            background-attachment: fixed;
+        }
+
+        /* Text and glow styling */
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+            color: #ffd700;
+            text-shadow: 3px 3px 8px #ff751a;
+            margin: 0;
+            animation: textGlow 2s infinite;
+            z-index: 2;
+            padding: 20px; /* Padding to separate text from edges */
+        }
+
+        @keyframes textGlow {
+            0%, 100% { text-shadow: 3px 3px 8px #ff751a; }
+            50% { text-shadow: 5px 5px 20px #ffcc00; }
+        }
+
+        /* Diya styling */
+        .diya {
+            font-size: 3em;
+            position: absolute;
+            animation: flicker 1.5s infinite;
+            z-index: 2;
+        }
+
+        .diya1 { top: 50%; left: 15%; }
+        .diya2 { top: 50%; right: 15%; }
+        
+        /* Flicker animation for diyas */
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Diwali Wishes Content -->
+    <h1>✨ Happy Diwali! ✨<br>May your life be filled with light and love! 🎉</h1>
+
+    <!-- Diya Icons -->
+    <div class="diya diya1">🪔</div>
+    <div class="diya diya2">🪔</div>
+
+    <!-- JavaScript for More Effects -->
+    <script>
+        // Create an array of Diwali greetings
+        const greetings = [
+            "Wishing you prosperity and joy!",
+            "May this Diwali bring you peace and happiness!",
+            "Happy Diwali to you and your family!",
+            "May your life be as colorful and shining as the lights of Diwali!",
+            "Celebrate the Festival of Lights with love and laughter!"
+        ];
+
+        // Target the h1 element to update text
+        const message = document.querySelector("h1");
+
+        // Change the text every 3 seconds
+        let index = 0;
+        setInterval(() => {
+            message.innerHTML = `✨ ${greetings[index]} ✨`;
+            index = (index + 1) % greetings.length;  // Loop through greetings
+        }, 3000);
+    </script>
+
+</body>
+</html>
+
+
+
+
